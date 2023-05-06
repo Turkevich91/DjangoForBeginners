@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<article>
+    <h1>
+        In this article I'm going to tell you about red panda.
+    </h1>
+    <img src="{% static 'red_panda.bmp' %}" alt="red_panda.bmp">
+    <p>Red Pandas mostly live in trees and are only a little larger than a domestic cat. These sweet, furry creatures
+        are known for wrapping themselves up in their tails in the winter for warmth. They primarily live in the Eastern
+        Himalayas.</p>
+    <p>Like Giant Pandas, Red Pandas have a pseudo-thumb, which makes it possible for them to grasp bamboo while they eat.
+        They are the only living members of the family Ailuridae.</p>
+</article>
+<p>Read more on <a href="https://paradepets.com/pet-news/cute-animals">paradepets.com</a></p>
+{% endblock %}

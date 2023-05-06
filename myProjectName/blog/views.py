@@ -15,3 +15,10 @@ def blog_root_view(request):
 
 def categories_view(request):
     return HttpResponse("<h1>blog Categories 📃</h1>")
+
+
+def animals_view(request):
+    rendered = render_to_string('animals.html', {
+
+    })
+    return HttpResponse(rendered)

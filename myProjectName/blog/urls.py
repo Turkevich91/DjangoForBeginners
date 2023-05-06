@@ -21,4 +21,5 @@ from . import views
 urlpatterns = [
     path('', views.blog_root_view, name='blog root'),
     path('categories/', views.categories_view, name='blog root'),
+    path('animals/', views.animals_view, name='animals'),
 ]

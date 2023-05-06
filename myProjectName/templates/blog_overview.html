@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-    <h1>{{ message }}</h1>
+<img src="{% static 'blog.bmp' %}" alt="img">
+
+<h1>{{ message }}</h1>
+
+<p>Would you like to read about <a href="{% url 'animals' %}">animals</a>?</p>
+
 {% endblock %}
