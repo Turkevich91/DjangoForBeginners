@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(blue, pink);
+}
+
+header>nav {
+  height: 10vh;
+  padding: 15px !important;
+  background: linear-gradient(#ffc0cb22, #0014ff22);
+}
+
+#navbarSupportedContent {
+  justify-content: space-between;
+}
+
+#context-container  {
+  height: 80vh;
+}
+
+footer {
+  height: 10vh;
+  padding: 5px;
+  background: linear-gradient(#ffc0cb, #0014ff);
+  border: 1px solid silver;
+}
+
+
+.form-inline {
+  display: inline-flex;
+}
