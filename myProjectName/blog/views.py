@@ -1,9 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
 from django.http import HttpResponse
+from django.views import View
+
+from blog.models import Animal
 
 
 # Create your views here.
+class AnimalView(View):
+    template_name = 'animal_catalog.html'
+
+    def get(self, request):
+        animals = Animal.objects.all()
+        return render(request, self.template_name, {'animals': animals})
+
+
+class AnimalDetailView(View):
+    template_name = 'animal_detail.html'
+
+    def get(self, request, animal_id):
+        animal = get_object_or_404(Animal, id=animal_id)
+        return render(request, self.template_name, {'animal': animal})
+
 
 def blog_root_view(request):
     rendered = render_to_string('blog_overview.html', {

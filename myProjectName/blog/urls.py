@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views.blog_root_view, name='blog root'),
     path('categories/', views.categories_view, name='blog root'),
     path('animals/', views.animals_view, name='animals'),
+    path('animal/', views.AnimalView.as_view(), name="animal_catalog"),
+    path('animal/<int:animal_id>', views.AnimalDetailView.as_view(), name="animal_detail")
 ]

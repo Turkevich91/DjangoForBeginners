@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{#{% load static %}#}
+{% block content %}
+  <h1>Animals</h1>
+  <div style="display: flex; flex-direction: column; text-align: left;">
+    {% for animal in animals %}
+      <div style="padding: 5px; margin: 5px;">
+        <a href="{% url 'animal_detail' animal.id %}" style="text-decoration-line: none; color: blueviolet">
+          <img width="60" src="{{ animal.image.url }}" alt="">
+          {{ animal.name }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
