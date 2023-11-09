@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{{ animal.name }}</h1>
-    <img width="100%" src="{{ animal.image.url }}" alt="{{ animal.name }}">
-    <p>{{ animal.description }}</p>
+  <h1>{{ animal.name }}</h1>
+  <img width="100%" src="{{ animal.image.url }}" alt="{{ animal.name }}">
+  <p>{{ animal.description }}</p>
+
+  <div style="display: flex; justify-content: space-around;">
+    <form method="POST" action="" style="display: flex; flex-direction: column; width: 30%">
+      {% csrf_token %}
+      <input type="text" name="name" value="name">
+      <textarea name="comment" id="" cols="30" rows="10"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 {% endblock %}
